@@ -102,3 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+.idea
+.pytest_cache
+__pycache__
+report
