@@ -22,3 +22,15 @@ class TestLogin:
         self.page.login_page.input_password(password)
         self.page.login_page.click_login()
         self.page.login_page.is_toast_exist(expect)
+
+    @pytest.mark.parametrize("args", analyze_with_file("login_data", "test_login_miss_part"))
+    def test_login_miss_part(self, args):
+        username = args["username"]
+        password = args["password"]
+
+        self.page.home_page.click_mine()
+        self.page.mine_page.click_login_reg()
+        self.page.login_page.input_username(username)
+        self.page.login_page.input_password(password)
+        return not self.page.login_page.is_login_button_enabled()
+
