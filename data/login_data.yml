@@ -1,0 +1,9 @@
+test_login:
+  test_login_001:
+    username: "13800138006"
+    password: "123456"
+    expect: "登录成功"
+  test_login_002:
+    username: "13800138006"
+    password: "123455"
+    expect: "密码错误"
