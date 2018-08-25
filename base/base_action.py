@@ -48,3 +48,10 @@ class BaseAction:
 
     def is_location_enabled(self, location):
         return self.find_element(location).get_attribute("enabled") == "true"
+
+    def is_location_exist(self, location):
+        try:
+            self.find_element(location)
+            return True
+        except:
+            return False

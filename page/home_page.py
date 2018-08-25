@@ -5,7 +5,7 @@ from base.base_action import BaseAction
 
 
 class HomePage(BaseAction):
-    mine_button = By.XPATH, "//*[@text='我的']"
+    mine_button = By.XPATH, "//*[@text='我的' and @resource-id='com.tpshop.malls:id/tab_txtv']"
     # @id='com.tpshop.malls:id/tab_txtv'
 
     @allure.step('点击首页中我的')
